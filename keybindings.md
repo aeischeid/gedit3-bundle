@@ -1,4 +1,4 @@
-Gedit Keybindings, Preparing to create a Cheat Sheet
+# Gedit Keybindings: a Cheat Sheet
 
 General
 =======
@@ -32,6 +32,8 @@ CTRL+C         => Copy selected text or region to clipboard
 CTRL+V         => Paste clipboard content to current cursor position
 CTRL+D         => Delete current line
 CTRL+SHIFT+DEL => Delete from cursor to end of line
+ALT+ARROWUP   => Move current line up
+ALT+ARROWDOWN => Move current line down
 
 Panels
 ======
@@ -50,10 +52,6 @@ CTRL+I       => Go to Line
 
 Plugins Keystrokes
 ==================
-
-Regex Search and Replace
-------------------------
-CTRL+SHIFT+H => Open Search and Replace by regex dialog
 
 Code Comment
 ------------
@@ -82,25 +80,11 @@ Spell Checker
 -------------
 SHIFT+F7 => Spell check
 
-Todo List
----------------
-CTRL+ALT+T => Show Todo Marks List Window
-
-Text Tools
-----------
-CTRL+SHIFT+C  => Clear Line (Without Delete)
-CTRL+SHIFT+D  => Duplicate current line
-ALT+ARROWUP   => Move current line up
-ALT+ARROWDOWN => Move current line down
-CTRL+ALT+9    => Select text enclosed by Pairs Ex: ({"['<
-ALT+W         => Select Word
-ALT+SHIFT+W   => Select Word Special (Ignoring delimiters)
-
 Multi-edit
 ----------
 CTRL+R => Add single mark
 
-Fuzzy Open
+Snap Open
 ----------
 CTRL+SHIFT+O => Open file by regex search (Go to File Window)
 
@@ -113,47 +97,10 @@ Indent Lines
 CTRL+T / CRTL+TAB => Indent Selected Lines
 CTRL+SHIFT+T / CRTL+SHIFT+TAB => Unindent Linex
 
-Quick Highlight Mode
---------------------
-CTRL+SHIFT+H => Fast Switch current syntax highlight mode
-
 Join Lines
 ----------
 CTRL+J       => Join Current Line with the next line
 CTRL+SHIFT+J => Split current Line
-
-Rails Extract Partial
----------------------
-CTRL+ALT+P => Create a partial with selected text
-
-Rails Hot Commands
-------------------
-CTRL+ALT+C => Open Rails Hot Commands Window
-
-Rails Hot Keys
---------------
-The current Active File Needs to be in an Rails project folder
-
-Press CTRL+SHIFT+R to Activate Rails Hot Keys then Press
-
-F1 => Open the help file
-A  => Open controllers/application[_controller].rb File
-B  => Open your Rails project base directory
-C  => Open a controller file
-D  => Open the config/database.yml file
-E  => Open the config/environment.rb file
-F  => Open a functional test file
-H  => Open a helper file
-I  => Open a integration file
-J  => Open a fixture file
-L  => Open the views/layouts/application.rhtml file
-M  => Open a model file
-N  => Open the URL http://localhost:3000/ on your default browser
-P  => Open the public directory
-R  => Open the config/routes.rb file
-T  => Open all the tests (units, functionals and integration)
-U  => Open a unit test file
-V  => Open the view directory
 
 Align...
 --------
