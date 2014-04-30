@@ -1,0 +1,11 @@
+[Plugin]
+Loader=python3
+Module=KeyboardScrolling
+IAge=3
+Name=Keyboard Scrolling
+Description=Provides keyboard scrolling using Ctrl+Up/Down without moving cursor from current position.
+Authors=Todor Ganchovsky
+Copyright=Copyright © 2013 Todor Ganchovsky
+Website=https://gitorious.org/keyboardscrolling
+Version=0.2
+

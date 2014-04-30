@@ -10,21 +10,27 @@ This repo is merely a convenient place to gather pieces together and make it eas
 
 Use the install.sh to install language support, themes, and snippets.
 
-Adding plugins is up to you to do manually, but don't be intimidated. Simply copy plugins you want into `~/.local/share/gedit/plugins`
+1. download zip or `git clone https://github.com/aeischeid/gedit3-bundle.git'
+1. navigate into directory
+1. `sudo ./install.sh`
+
+Adding plugins is up to you to do manually, but don't be intimidated. Simply move plugins you want into `~/.local/share/gedit/plugins`
 
 -------------------
 
 ### Plugins
 
-* **Advanced Find/Replace**. Search and replace in all documents/tabs
-* **Gemini**. Pair complete for quotes and braces.
-* **Line Tools**. comment toggle, duplicate, selection, add semi-colon.
-* **Restore Tabs** Save a collection of document tabs to restore on startup.
-* **Simple Folding**. Collapse text based on indentation level.
+the official list of plugins is on [the gedit wiki](https://wiki.gnome.org/Apps/Gedit/ThirdPartyPlugins-v3.8)
+
+* **Advanced Find/Replace** Search and replace in all files/documents/tabs.
+* **Gemini** Pair complete for quotes and braces.
+* **Line Tools** Comment toggle, duplicate, selection, add semi-colon.
+* **[Keyboard scrolling](https://gitorious.org/keyboardscrolling)** scrolling documents using Ctrl+Up/Down keys without moving the cursor
+* **Simple Folding** Collapse text based on indentation level.
 * **Smart Highlight** Highlighing all occerences of the selected text.
-* **Snap Open**. Quickly search by file name to open files 
-* **Source Code Browser** A source code class and function browser
-* **Zen Coding**. Tools for faster HTML/CSS coding using css selector like syntax
+* **Snap Open** Quickly search by file name to open files.
+* **Source Code Browser** A source code class and function browser.
+* **Zen Coding** Tools for faster HTML/CSS coding using css selector like syntax
 
 
 Refer to each plugin source code and readme file to get information about
@@ -32,15 +38,15 @@ specific plugin licensing and copyright.
 
 ### Languages
 
-* Basic YAML 
-* CoffeeScript 
-* ColdFusion 
-* Cucumber 
+* Basic YAML
+* CoffeeScript
+* ColdFusion
+* Cucumber
 * Groovy/Grails/Gradle
-* HAML 
-* Markdown 
-* reStructuredText 
-* rhtml/erb 
+* HAML
+* Markdown
+* reStructuredText
+* rhtml/erb
 * Ruby/Rails
-* SASS and Stylus 
+* SASS and Stylus
 * Jade and Eco templates

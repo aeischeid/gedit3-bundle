@@ -13,13 +13,15 @@ CTRL+SHIFT+P => Preview Print
 CTRL+P       => Print...
 CTRL+Q       => Close Gedit
 
-Tabs and documents
+Tabs, documents, groups
 ==================
 CTRL+W          => Close Current Document/Tab
 CTRL+SHIFT+W    => Close All Documents/Tabs
+CTRL+SHIFT+L    => Save All Documents/Tabs
 CTRL+ALT+PGUP   => Go to Left Tab
 CTRL+ALT+PGDOWN => Go to Right Tab
-ALT+n           => Go to Document/Tab n
+ALT+N           => Go to Document/Tab n
+CTRL+ALT+N      => New tab group (document pane)
 
 Text Manipulation
 =================
@@ -32,13 +34,15 @@ CTRL+C         => Copy selected text or region to clipboard
 CTRL+V         => Paste clipboard content to current cursor position
 CTRL+D         => Delete current line
 CTRL+SHIFT+DEL => Delete from cursor to end of line
-ALT+ARROWUP   => Move current line up
-ALT+ARROWDOWN => Move current line down
+ALT+ARROWUP    => Move current line or highlighted lines up
+ALT+ARROWDOWN  => Move current line or highlighted lines down
+SHIFT+TAB      => Unindent, works for one line or all highlighted lines
+TAB            => Will increase indent of multiple lines if highlighted otherwise behaves as normal 
 
 Panels
 ======
 F9      => Show/Hide Side panel (Filebrowser)
-CTRL+F9 => Show/Hide bottom panel (Terminal)
+CTRL+F9 => Show/Hide bottom panel (Terminal/Find-Replace)
 
 Searching
 =========
