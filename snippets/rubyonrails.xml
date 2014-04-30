@@ -1,0 +1,1659 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="rubyonrails">
+  <snippet id="forin">
+    <text><![CDATA[for ${1:element} in ${2:collection}
+	${1:element}.$0
+end]]></text>
+    <description>for .. in .. end</description>
+    <tag>forin</tag>
+  </snippet>
+  <snippet id="inject">
+    <text><![CDATA[inject(${1:object}) { |${2:injection}, ${3:element}| $0 }]]></text>
+    <description>inject object</description>
+    <tag>inject</tag>
+  </snippet>
+  <snippet id="reject">
+    <text><![CDATA[reject { |${1:element}| ${1:element}.$0 }]]></text>
+    <description>reject element</description>
+    <tag>reject</tag>
+  </snippet>
+  <snippet id="select">
+    <text><![CDATA[select { |${1:element}| ${1:element}.$0 }]]></text>
+    <description>select element</description>
+    <tag>select</tag>
+  </snippet>
+  <snippet id="ife">
+    <text><![CDATA[if ${1:condition}
+	$2
+else
+	$3
+end]]></text>
+    <description>if .. else .. end</description>
+    <tag>ife</tag>
+  </snippet>
+  <snippet id="if">
+    <text><![CDATA[if ${1:condition}
+	$0
+end]]></text>
+    <description>if .. end</description>
+    <tag>if</tag>
+  </snippet>
+  <snippet id="case">
+    <text><![CDATA[case ${1:object}
+	when ${2:condition}
+		$0
+end]]></text>
+    <description>case .. end</description>
+    <tag>case</tag>
+  </snippet>
+  <snippet id="begin">
+    <text><![CDATA[begin
+	$1
+rescue ${2:Exception} => ${3:e}
+	$0
+end]]></text>
+    <description>begin .. rescue .. end</description>
+    <tag>begin</tag>
+  </snippet>
+  <snippet id="class">
+    <text><![CDATA[class ${1:class_name}
+	$0
+end]]></text>
+    <description>class .. end</description>
+    <tag>class</tag>
+  </snippet>
+  <snippet id="collecto">
+    <text><![CDATA[collect do |${1:element}|
+	${1:element}.$0
+end]]></text>
+    <description>collect element do</description>
+    <tag>collecto</tag>
+  </snippet>
+  <snippet id="collect">
+    <text><![CDATA[collect { |${1:element}| ${1:element}.$0 }]]></text>
+    <description>collect element</description>
+    <tag>collect</tag>
+  </snippet>
+  <snippet id="def">
+    <text><![CDATA[def ${1:method_name}
+	$0
+end]]></text>
+    <description>def .. end</description>
+    <tag>def</tag>
+  </snippet>
+  <snippet id="do">
+    <text><![CDATA[do
+	$0
+end]]></text>
+    <description>do .. end</description>
+    <tag>do</tag>
+  </snippet>
+  <snippet id="doo">
+    <text><![CDATA[do |${1:object}|
+	$0
+end]]></text>
+    <description>do |object| .. end</description>
+    <tag>doo</tag>
+  </snippet>
+  <snippet id="eacho">
+    <text><![CDATA[each do |${1:element}|
+	${1:element}.$0
+end]]></text>
+    <description>each element do</description>
+    <tag>eacho</tag>
+  </snippet>
+  <snippet id="each">
+    <text><![CDATA[each { |${1:element}| ${1:element}.$0 }]]></text>
+    <description>each element</description>
+    <tag>each</tag>
+  </snippet>
+  <snippet id="each_with_indexo">
+    <text><![CDATA[each_with_index do |${1:element}, ${2:idx}|
+	${1:element}.$0
+end]]></text>
+    <description>each_with_index do</description>
+    <tag>eachwithindexo</tag>
+  </snippet>
+  <snippet id="each_with_index">
+    <text><![CDATA[each_with_index { |${1:element}, ${2:idx}| ${1:element}.$0 }]]></text>
+    <description>each_with_index</description>
+    <tag>eachwithindex</tag>
+  </snippet>
+  <snippet id=":">
+    <text><![CDATA[:${1:key} => ${2:"value"}]]></text>
+    <description>hash pair</description>
+    <tag>:</tag>
+  </snippet>
+  <snippet id="hashpointer">
+    <text><![CDATA[ => ]]></text>
+    <accelerator><![CDATA[<Shift><Alt>l]]></accelerator>
+    <description>hash pointer</description>
+  </snippet>
+  <snippet id="injecto">
+    <text><![CDATA[inject(${1:object}) do |${2:injection}, ${3:element}|
+	$0
+end]]></text>
+    <description>inject object do</description>
+    <tag>injecto</tag>
+  </snippet>
+  <snippet id="rejecto">
+    <text><![CDATA[reject do |${1:element}|
+	${1:element}.$0
+end]]></text>
+    <description>reject element do</description>
+    <tag>rejecto</tag>
+  </snippet>
+  <snippet id="selecto">
+    <text><![CDATA[select do |${1:element}|
+	${1:element}.$0
+end]]></text>
+    <description>select element do</description>
+    <tag>selecto</tag>
+  </snippet>
+  <snippet id="unless">
+    <text><![CDATA[unless ${1:condition}
+	$0
+end]]></text>
+    <description>unless</description>
+    <tag>unless</tag>
+  </snippet>
+  <snippet id="when">
+    <text><![CDATA[when ${1:condition}
+	$0]]></text>
+    <description>when</description>
+    <tag>when</tag>
+  </snippet>
+  <snippet id="all">
+    <tag>all</tag>
+    <description>all? { |e| .. }</description>
+    <text><![CDATA[all? { |${1:e}| ${0} }]]></text>
+  </snippet>
+  <snippet id="am">
+    <tag>am</tag>
+    <description>alias_method ...</description>
+    <text><![CDATA[alias_method :${1:new_name}, :${2:old_name}]]></text>
+  </snippet>
+  <snippet id="any">
+    <tag>any</tag>
+    <description>any? { |e| .. }</description>
+    <text><![CDATA[any? { |${1:e}| ${0} }]]></text>
+  </snippet>
+  <snippet id="app">
+    <tag>app</tag>
+    <description>application_code { .. }</description>
+    <text><![CDATA[if __FILE__ == $$PROGRAM_NAME
+	${0}
+end]]></text>
+  </snippet>
+  <snippet id="Array">
+    <tag>Array</tag>
+    <description>Array.new(10) { |i| .. }</description>
+    <text><![CDATA[Array.new(${1:10}) { |${2:i}|${0} }]]></text>
+  </snippet>
+  <snippet id="rdoc">
+    <tag>rdoc</tag>
+    <description>New Block</description>
+    <text><![CDATA[=begin rdoc
+	${0}
+=end]]></text>
+  </snippet>
+  <snippet id="bm">
+    <tag>bm</tag>
+    <description>Benchmark.bmbm(..) do .. end</description>
+    <text><![CDATA[TESTS = ${1:10_000}
+Benchmark.bmbm(${2:10}) do |results|
+  ${0}
+end]]></text>
+  </snippet>
+  <snippet id="bt">
+    <tag>bt</tag>
+    <description>belongs_to</description>
+    <text><![CDATA[belongs_to :${1:object}]]></text>
+  </snippet>
+  <snippet id="cl">
+    <tag>cl</tag>
+    <description>classify { |e| .. }</description>
+    <text><![CDATA[classify { |${1:e}| ${0} }]]></text>
+  </snippet>
+  <snippet id="cla">
+    <tag>cla</tag>
+    <description>class .. &lt; DelegateClass .. initialize .. end</description>
+    <text><![CDATA[class ${1:ClassName} < DelegateClass(${2:ParentClass})
+	def initialize${1}
+		super(${3:del_obj})
+
+		${0}
+	end
+
+
+end]]></text>
+  </snippet>
+  <snippet id="cla">
+    <tag>cla</tag>
+    <description>class .. &lt; ParentClass .. initialize .. end</description>
+    <text><![CDATA[class ${1:ClassName} < ${2:ParentClass}
+	def initialize${1}
+		${0}
+	end
+
+
+end]]></text>
+  </snippet>
+  <snippet id="cla">
+    <tag>cla</tag>
+    <description>class .. &lt; Struct .. initialize .. end</description>
+    <text><![CDATA[class ${1:ClassName} < Struct.new(:${2:attr_names})
+	def initialize(*args)
+		super
+
+		${0}
+	end
+
+
+end]]></text>
+  </snippet>
+  <snippet id="cla">
+    <tag>cla</tag>
+    <description>class .. initialize .. end</description>
+    <text><![CDATA[class ${1:ClassName}
+	def initialize${1}
+		${0}
+	end
+
+
+end]]></text>
+  </snippet>
+  <snippet id="cla">
+    <tag>cla</tag>
+    <description>class &lt;&lt; self .. end</description>
+    <text><![CDATA[class << ${1:self}
+	${0}
+end]]></text>
+  </snippet>
+  <snippet id="cla">
+    <tag>cla</tag>
+    <description>class BlankSlate .. initialize .. end</description>
+    <text><![CDATA[class ${1:BlankSlate}
+	instance_methods.each { |meth| undef_method(meth) unless meth =~ /\A__/ }
+
+	def initialize${1}
+		@${3:delegate} = ${delegate_object}
+
+		${0}
+	end
+
+	def method_missing(meth, *args, &block)
+		@${3}.send(meth, *args, &block)
+	end
+
+
+end]]></text>
+  </snippet>
+  <snippet id="clafn">
+    <tag>clafn</tag>
+    <description>class_from_name()</description>
+    <text><![CDATA[split("::").inject(Object) { |par, const| par.const_get(const) }]]></text>
+  </snippet>
+  <snippet id="col">
+    <tag>col</tag>
+    <description>collect { |e| .. }</description>
+    <text><![CDATA[collect { |${1:e}| ${0} }]]></text>
+  </snippet>
+  <snippet id="Comp">
+    <tag>Comp</tag>
+    <description>include Comparable ..</description>
+    <text><![CDATA[include Comparable
+
+def <=>(other)
+	${0}
+end]]></text>
+  </snippet>
+  <snippet id="dee">
+    <tag>dee</tag>
+    <description>deep_copy(..)</description>
+    <text><![CDATA[Marshal.load(Marshal.dump(${1:obj_to_copy}))]]></text>
+  </snippet>
+  <snippet id="defd">
+    <tag>defd</tag>
+    <description>def_delegator ..</description>
+    <text><![CDATA[def_delegator :${1:del_obj}, :${2:del_meth}, :${3:new_name}]]></text>
+  </snippet>
+  <snippet id="defds">
+    <tag>defds</tag>
+    <description>def_delegators ..</description>
+    <text><![CDATA[def_delegators :${1:del_obj}, :${2:del_methods}]]></text>
+  </snippet>
+  <snippet id="defs">
+    <tag>defs</tag>
+    <description>def self .. end</description>
+    <text><![CDATA[def self.${1:class_method_name}
+	${0}
+end]]></text>
+  </snippet>
+  <snippet id="deli">
+    <tag>deli</tag>
+    <description>delete_if { |e| .. }</description>
+    <text><![CDATA[delete_if { |${1:e}| ${0} }]]></text>
+  </snippet>
+  <snippet id="det">
+    <tag>det</tag>
+    <description>detect { |e| .. }</description>
+    <text><![CDATA[detect { |${1:e}| ${0} }]]></text>
+  </snippet>
+  <snippet id="Dir">
+    <tag>Dir</tag>
+    <description>Dir.glob("..") { |file| .. }</description>
+    <text><![CDATA[Dir.glob(${1:glob}) { |${2:file}| ${0} }]]></text>
+  </snippet>
+  <snippet id="dow">
+    <tag>dow</tag>
+    <description>downto(0) { |n| .. }</description>
+    <text><![CDATA[downto(${1}) { |${2:n}| ${0} }]]></text>
+  </snippet>
+  <snippet id="ea">
+    <tag>ea</tag>
+    <description>each { |e| .. }</description>
+    <text><![CDATA[each { |${1:e}| ${0} }]]></text>
+  </snippet>
+  <snippet id="eab">
+    <tag>eab</tag>
+    <description>each_byte { |byte| .. }</description>
+    <text><![CDATA[each_byte { |${1:byte}| ${0} }]]></text>
+  </snippet>
+  <snippet id="eac">
+    <tag>eac</tag>
+    <description>each_char { |chr| .. }</description>
+    <text><![CDATA[each_char { |${1:chr}| ${0} }]]></text>
+  </snippet>
+  <snippet id="eac">
+    <tag>eac</tag>
+    <description>each_cons(..) { |group| .. }</description>
+    <text><![CDATA[each_cons(${1:2}) { |${2:group}| ${0} }]]></text>
+  </snippet>
+  <snippet id="eachwithindex">
+    <tag>eachwithindex</tag>
+    <description>each_with_index</description>
+    <text><![CDATA[each_with_index { |${1:element}, ${2:idx}| ${1}.${0} }]]></text>
+  </snippet>
+  <snippet id="eai">
+    <tag>eai</tag>
+    <description>each_index { |i| .. }</description>
+    <text><![CDATA[each_index { |${1:i}| ${0} }]]></text>
+  </snippet>
+  <snippet id="eal">
+    <tag>eal</tag>
+    <description>each_line { |line| .. }</description>
+    <text><![CDATA[each_line${1:1} { |${2:line}| ${0} }]]></text>
+  </snippet>
+  <snippet id="eap">
+    <tag>eap</tag>
+    <description>each_pair { |name, val| .. }</description>
+    <text><![CDATA[each_pair { |${1:name}, ${2:val}| ${0} }]]></text>
+  </snippet>
+  <snippet id="eas">
+    <tag>eas</tag>
+    <description>each_slice(..) { |group| .. }</description>
+    <text><![CDATA[each_slice(${1:2}) { |${2:group}| ${0} }]]></text>
+  </snippet>
+  <snippet id="eav">
+    <tag>eav</tag>
+    <description>each_value { |val| .. }</description>
+    <text><![CDATA[each_value { |${1:val}| ${0} }]]></text>
+  </snippet>
+  <snippet id="eawi">
+    <tag>eawi</tag>
+    <description>each_with_index { |e, i| .. }</description>
+    <text><![CDATA[each_with_index { |${1:e}, ${2:i}| ${0} }]]></text>
+  </snippet>
+  <snippet id="elsif">
+    <tag>elsif</tag>
+    <description>elsif ...</description>
+    <text><![CDATA[elsif ${1:condition}
+	${0}]]></text>
+  </snippet>
+  <snippet id="EmbeddedCode">
+    <tag>EmbeddedCode</tag>
+    <description>Embedded Code — #{…}</description>
+    <text><![CDATA[#{${1:paste}}]]></text>
+  </snippet>
+  <snippet id="Enum">
+    <tag>Enum</tag>
+    <description>include Enumerable ..</description>
+    <text><![CDATA[include Enumerable
+
+def each(&block)
+	${0}
+end]]></text>
+  </snippet>
+  <snippet id="fet">
+    <tag>fet</tag>
+    <description>fetch(name) { |key| .. }</description>
+    <text><![CDATA[fetch(${1:name}) { |${2:key}|${0} }]]></text>
+  </snippet>
+  <snippet id="fil">
+    <tag>fil</tag>
+    <description>fill(range) { |i| .. }</description>
+    <text><![CDATA[fill(${1:range}) { |${2:i}|${0} }]]></text>
+  </snippet>
+  <snippet id="File">
+    <tag>File</tag>
+    <description>File.foreach ("..") { |line| .. }</description>
+    <text><![CDATA[File.foreach(${1:file}) { |${2:line}| ${0} }]]></text>
+  </snippet>
+  <snippet id="fin">
+    <tag>fin</tag>
+    <description>find { |e| .. }</description>
+    <text><![CDATA[find { |${1:e}| ${0} }]]></text>
+  </snippet>
+  <snippet id="fina">
+    <tag>fina</tag>
+    <description>find_all { |e| .. }</description>
+    <text><![CDATA[find_all { |${1:e}| ${0} }]]></text>
+  </snippet>
+  <snippet id="fl">
+    <tag>fl</tag>
+    <description>flunk(..)</description>
+    <text><![CDATA[flunk("${1:message}")]]></text>
+  </snippet>
+  <snippet id="flao">
+    <tag>flao</tag>
+    <description>flatten_once()</description>
+    <text><![CDATA[inject(Array.new) { |${1:arr}, ${2:a}| ${1}.push(*${a}) }]]></text>
+  </snippet>
+  <snippet id="f">
+    <tag>f</tag>
+    <description>flash[…]</description>
+    <text><![CDATA[flash[:${1:notice}] = "${2:Successfully}"${0}]]></text>
+  </snippet>
+  <snippet id="Forw">
+    <tag>Forw</tag>
+    <description>extend Forwardable</description>
+    <text><![CDATA[extend Forwardable]]></text>
+  </snippet>
+  <snippet id="gre">
+    <tag>gre</tag>
+    <description>grep(/pattern/) { |match| .. }</description>
+    <text><![CDATA[grep(${1:pattern}) { |${2:match}| ${0} }]]></text>
+  </snippet>
+  <snippet id="gsu">
+    <tag>gsu</tag>
+    <description>gsub(/../) { |match| .. }</description>
+    <text><![CDATA[gsub(/${1:pattern}/) { |${2:match}|${0} }]]></text>
+  </snippet>
+  <snippet id="hbtm">
+    <tag>hbtm</tag>
+    <description>has_and_belongs_to_many</description>
+    <text><![CDATA[has_and_belongs_to_many :${1:object}]]></text>
+  </snippet>
+  <snippet id="Hash">
+    <tag>Hash</tag>
+    <description>Hash.new { |hash, key| hash[key] = .. }</description>
+    <text><![CDATA[Hash.new { |${1:hash}, ${2:key}| ${1}[${2}] = ${0} }]]></text>
+  </snippet>
+  <snippet id="hm">
+    <tag>hm</tag>
+    <description>has_many</description>
+    <text><![CDATA[has_many :${1:objects}]]></text>
+  </snippet>
+  <snippet id="ho">
+    <tag>ho</tag>
+    <description>has_one</description>
+    <text><![CDATA[has_one :${1:object}]]></text>
+  </snippet>
+  <snippet id="inj">
+    <tag>inj</tag>
+    <description>inject(init) { |mem, var| .. }</description>
+    <text><![CDATA[inject(${1:init}) { |${2:mem}, ${3:var}| ${0} }]]></text>
+  </snippet>
+  <snippet id="init">
+    <tag>init</tag>
+    <description>def initialize</description>
+    <text><![CDATA[def initialize${1:params}
+  ${0}
+end]]></text>
+  </snippet>
+  <snippet id="lam">
+    <tag>lam</tag>
+    <description>lambda { |args| .. }</description>
+    <text><![CDATA[lambda { |${1:args}| ${0} }]]></text>
+  </snippet>
+  <snippet id="log">
+    <tag>logd</tag>
+    <description>logger.debug</description>
+    <text><![CDATA[logger.debug "${1:message}"${0}]]></text>
+  </snippet>
+  <snippet id="log">
+    <tag>loge</tag>
+    <description>logger.error</description>
+    <text><![CDATA[logger.error "${1:message}"${0}]]></text>
+  </snippet>
+  <snippet id="log">
+    <tag>logf</tag>
+    <description>logger.fatal</description>
+    <text><![CDATA[logger.fatal "${1:message}"${0}]]></text>
+  </snippet>
+  <snippet id="log">
+    <tag>logi</tag>
+    <description>logger.info</description>
+    <text><![CDATA[logger.info "${1:message}"${0}]]></text>
+  </snippet>
+  <snippet id="log">
+    <tag>logw</tag>
+    <description>logger.warn</description>
+    <text><![CDATA[logger.warn "${1:message}"${0}]]></text>
+  </snippet>
+  <snippet id="map">
+    <tag>map</tag>
+    <description>map { |e| .. }</description>
+    <text><![CDATA[map { |${1:e}| ${0} }]]></text>
+  </snippet>
+  <snippet id="mapwi">
+    <tag>mapwi</tag>
+    <description>map_with_index { |e, i| .. }</description>
+    <text><![CDATA[enum_with_index.map { |${1:e}, ${2:i}| ${0} }]]></text>
+  </snippet>
+  <snippet id="max">
+    <tag>max</tag>
+    <description>max { |a, b| .. }</description>
+    <text><![CDATA[max { |a, b| ${0} }]]></text>
+  </snippet>
+  <snippet id="mccc">
+    <tag>mccc</tag>
+    <description>Create Several Columns</description>
+    <text><![CDATA[t.column :${1:title}, :${2:string}
+mccc${0}]]></text>
+  </snippet>
+  <snippet id="mcol">
+    <tag>mcol</tag>
+    <description>Add Column</description>
+    <text><![CDATA[add_column :${1:table}, :${2:column}, :${3:string}]]></text>
+  </snippet>
+  <snippet id="mcol">
+    <tag>mcol</tag>
+    <description>Create Column in Table</description>
+    <text><![CDATA[t.column :${1:title}, :${2:string} ${0}]]></text>
+  </snippet>
+  <snippet id="mcol">
+    <tag>mcol</tag>
+    <description>Remove Column</description>
+    <text><![CDATA[remove_column :${1:table}, :${2:column}]]></text>
+  </snippet>
+  <snippet id="mcol">
+    <tag>mcol</tag>
+    <description>Rename Column</description>
+    <text><![CDATA[rename_column :${1:column}, :${2:new_column}]]></text>
+  </snippet>
+  <snippet id="Md">
+    <tag>Md</tag>
+    <description>Marshal.dump(.., file)</description>
+    <text><![CDATA[File.open(${1:dump}, "w") { |${2:file}| Marshal.dump(${3:obj}, ${2}) }]]></text>
+  </snippet>
+  <snippet id="min">
+    <tag>min</tag>
+    <description>min { |a, b| .. }</description>
+    <text><![CDATA[min { |a, b| ${0} }]]></text>
+  </snippet>
+  <snippet id="Ml">
+    <tag>Ml</tag>
+    <description>Marshal.load(obj)</description>
+    <text><![CDATA[File.open(${1:dump}) { |${2:file}| Marshal.load(${2}) }]]></text>
+  </snippet>
+  <snippet id="mm">
+    <tag>mm</tag>
+    <description>def method_missing .. end</description>
+    <text><![CDATA[def method_missing(meth, *args, &block)
+	${0}
+end]]></text>
+  </snippet>
+  <snippet id="mod">
+    <tag>mod</tag>
+    <description>module .. ClassMethods .. end</description>
+    <text><![CDATA[module ${1:ModuleName}
+	module ClassMethods
+		$0
+	end
+
+	module InstanceMethods
+
+	end
+
+	def self.included(receiver)
+		receiver.extend         ClassMethods
+		receiver.send :include, InstanceMethods
+	end
+end]]></text>
+  </snippet>
+  <snippet id="mod">
+    <tag>mod</tag>
+    <description>module .. end</description>
+    <text><![CDATA[module ${1:ModuleName}
+	${0}
+end]]></text>
+  </snippet>
+  <snippet id="mod">
+    <tag>mod</tag>
+    <description>module .. module_function .. end</description>
+    <text><![CDATA[module ${1:ModuleName}
+	module_function
+
+	${0}
+end]]></text>
+  </snippet>
+  <snippet id="mtab">
+    <tag>mtab</tag>
+    <description>Create Table</description>
+    <text><![CDATA[create_table :${1:table} do |t|
+    ${0}
+end]]></text>
+  </snippet>
+  <snippet id="mtab">
+    <tag>mtab</tag>
+    <description>Drop / Create Table</description>
+    <text><![CDATA[drop_table :${1:table}]]></text>
+  </snippet>
+  <snippet id="mtab">
+    <tag>mtab</tag>
+    <description>Drop Table</description>
+    <text><![CDATA[drop_table :${1:table}
+${0}]]></text>
+  </snippet>
+  <snippet id="mtab">
+    <tag>mtab</tag>
+    <description>Rename Table</description>
+    <text><![CDATA[rename_table :${1:table}, :${2:new_name}${0}]]></text>
+  </snippet>
+  <snippet id="ope">
+    <tag>ope</tag>
+    <description>open("path/or/url", "w") { |io| .. }</description>
+    <text><![CDATA[open(${1:pipe}) { |${2:io}| ${0} }]]></text>
+  </snippet>
+  <snippet id="opt">
+    <tag>opt</tag>
+    <description>option(..)</description>
+    <text><![CDATA[opts.on( "-${1:o}", "--${2:option}"${1},
+         "${3:description}" ) do |${opt}|
+	${0}
+end]]></text>
+  </snippet>
+  <snippet id="optp">
+    <tag>optp</tag>
+    <description>option_parse { .. }</description>
+    <text><![CDATA[require "optparse"
+require "ostruct"
+
+options = OpenStruct.new(${1:default})
+
+ARGV.options do |opts|
+	opts.banner = "Usage:  #{File.basename($$PROGRAM_NAME)}  [OPTIONS]${1}"
+
+	opts.separator ""
+	opts.separator "Specific Options:"
+
+	${0}
+
+	opts.separator "Common Options:"
+
+	opts.on( "-h", "--help",
+	         "Show this message." ) do
+		puts opts
+		exit
+	end
+
+	begin
+		opts.parse!
+	rescue
+		puts opts
+		exit
+	end
+end
+]]></text>
+  </snippet>
+  <snippet id="par">
+    <tag>par</tag>
+    <description>partition { |e| .. }</description>
+    <text><![CDATA[partition { |${1:e}| ${0} }]]></text>
+  </snippet>
+  <snippet id="p">
+    <tag>p</tag>
+    <description>params[…]</description>
+    <text><![CDATA[params[:${1:id}]]]></text>
+  </snippet>
+  <snippet id="patfh">
+    <tag>patfh</tag>
+    <description>path_from_here( .. )</description>
+    <text><![CDATA[File.join(File.dirname(__FILE__), *%w[${1:here}])]]></text>
+  </snippet>
+  <snippet id="Pn">
+    <tag>Pn</tag>
+    <description>PStore.new( .. )</description>
+    <text><![CDATA[PStore.new(${1:file_name})]]></text>
+  </snippet>
+  <snippet id="r">
+    <tag>r</tag>
+    <description>attr_reader ..</description>
+    <text><![CDATA[attr_reader :${1:attr_names}]]></text>
+  </snippet>
+  <snippet id="ra">
+    <tag>ra</tag>
+    <description>render (action)</description>
+    <text><![CDATA[render :action => "${1:action}"]]></text>
+  </snippet>
+  <snippet id="ral">
+    <tag>ral</tag>
+    <description>render (action, layout)</description>
+    <text><![CDATA[render :action => "${1:action}", :layout => "${2:layoutname}"]]></text>
+  </snippet>
+  <snippet id="ran">
+    <tag>ran</tag>
+    <description>randomize()</description>
+    <text><![CDATA[sort_by { rand }]]></text>
+  </snippet>
+  <snippet id="rb">
+    <tag>rb</tag>
+    <description>#!/usr/local/bin/ruby -w"</description>
+    <text><![CDATA[#!/usr/bin/env ruby -w
+
+]]></text>
+  </snippet>
+  <snippet id="rcea">
+    <tag>rcea</tag>
+    <description>render_component (action)</description>
+    <text><![CDATA[render_component :action => "${1:index}"]]></text>
+  </snippet>
+  <snippet id="rcec">
+    <tag>rcec</tag>
+    <description>render_component (controller)</description>
+    <text><![CDATA[render_component :controller => "${1:items}"]]></text>
+  </snippet>
+  <snippet id="rceca">
+    <tag>rceca</tag>
+    <description>render_component (controller, action)</description>
+    <text><![CDATA[render_component :controller => "${1:items}", :action => "${2:index}"]]></text>
+  </snippet>
+  <snippet id="rdb">
+    <tag>rdb</tag>
+    <description>RAILS_DEFAULT_LOGGER.debug</description>
+    <text><![CDATA[RAILS_DEFAULT_LOGGER.debug "${1:message}"${0}]]></text>
+  </snippet>
+  <snippet id="rea">
+    <tag>rea</tag>
+    <description>redirect_to (action)</description>
+    <text><![CDATA[redirect_to :action => "${1:index}"]]></text>
+  </snippet>
+  <snippet id="reai">
+    <tag>reai</tag>
+    <description>redirect_to (action, id)</description>
+    <text><![CDATA[redirect_to :action => "${1:show}", :id => ${2:item}]]></text>
+  </snippet>
+  <snippet id="rec">
+    <tag>rec</tag>
+    <description>redirect_to (controller)</description>
+    <text><![CDATA[redirect_to :controller => "${1:items}"]]></text>
+  </snippet>
+  <snippet id="reca">
+    <tag>reca</tag>
+    <description>redirect_to (controller, action)</description>
+    <text><![CDATA[redirect_to :controller => "${1:items}", :action => "${2:list}"]]></text>
+  </snippet>
+  <snippet id="recai">
+    <tag>recai</tag>
+    <description>redirect_to (controller, action, id)</description>
+    <text><![CDATA[redirect_to :controller => "${1:items}", :action => "${2:show}", :id => ${3:item}]]></text>
+  </snippet>
+  <snippet id="rej">
+    <tag>rej</tag>
+    <description>reject { |e| .. }</description>
+    <text><![CDATA[reject { |${1:e}| ${0} }]]></text>
+  </snippet>
+  <snippet id="reject">
+    <tag>reject</tag>
+    <description>reject element</description>
+    <text><![CDATA[reject { |${1:element}| ${2:element}.${0} }]]></text>
+  </snippet>
+  <snippet id="rep">
+    <tag>rep</tag>
+    <description>results.report(..) { .. }</description>
+    <text><![CDATA[results.report("${1:name}:") { TESTS.times { ${0} } }]]></text>
+  </snippet>
+  <snippet id="req">
+    <tag>req</tag>
+    <description>require ".."</description>
+    <text><![CDATA[require "${0}"]]></text>
+  </snippet>
+  <snippet id="reve">
+    <tag>reve</tag>
+    <description>reverse_each { |e| .. }</description>
+    <text><![CDATA[reverse_each { |${1:e}| ${0} }]]></text>
+  </snippet>
+  <snippet id="rf">
+    <tag>rf</tag>
+    <description>render (file)</description>
+    <text><![CDATA[render :file => "${1:filepath}"]]></text>
+  </snippet>
+  <snippet id="rfu">
+    <tag>rfu</tag>
+    <description>render (file, use_full_path)</description>
+    <text><![CDATA[render :file => "${1:filepath}", :use_full_path => ${2:false}]]></text>
+  </snippet>
+  <snippet id="ri">
+    <tag>ri</tag>
+    <description>render (inline)</description>
+    <text><![CDATA[render :inline => "${1:hello}"]]></text>
+  </snippet>
+  <snippet id="ril">
+    <tag>ril</tag>
+    <description>render (inline, locals)</description>
+    <text><![CDATA[render :inline => "${1:hello}", :locals => { ${2:name} => "${3:value}"${4} }]]></text>
+  </snippet>
+  <snippet id="rit">
+    <tag>rit</tag>
+    <description>render (inline, type)</description>
+    <text><![CDATA[render :inline => "${1:hello}", :type => ${2:rxml}]]></text>
+  </snippet>
+  <snippet id="rl">
+    <tag>rl</tag>
+    <description>render (layout)</description>
+    <text><![CDATA[render :layout => "${1:layoutname}"]]></text>
+  </snippet>
+  <snippet id="rn">
+    <tag>rn</tag>
+    <description>render (nothing)</description>
+    <text><![CDATA[render :nothing => ${true}]]></text>
+  </snippet>
+  <snippet id="rns">
+    <tag>rns</tag>
+    <description>render (nothing, status)</description>
+    <text><![CDATA[render :nothing => ${1:true}, :status => ${2:401}]]></text>
+  </snippet>
+  <snippet id="rp">
+    <tag>rp</tag>
+    <description>render (partial)</description>
+    <text><![CDATA[render :partial => "${1:item}"]]></text>
+  </snippet>
+  <snippet id="rpc">
+    <tag>rpc</tag>
+    <description>render (partial, collection)</description>
+    <text><![CDATA[render :partial => "${1:item}", :collection => ${2:items}]]></text>
+  </snippet>
+  <snippet id="rpl">
+    <tag>rpl</tag>
+    <description>render (partial, locals)</description>
+    <text><![CDATA[render :partial => "${1:item}", :locals => { :${2:name} => "${3:value}"${4} }]]></text>
+  </snippet>
+  <snippet id="rpo">
+    <tag>rpo</tag>
+    <description>render (partial, object)</description>
+    <text><![CDATA[render :partial => "${1:item}", :object => ${2:object}]]></text>
+  </snippet>
+  <snippet id="rps">
+    <tag>rps</tag>
+    <description>render (partial, status)</description>
+    <text><![CDATA[render :partial => "${1:item}", :status => ${2:500}]]></text>
+  </snippet>
+  <snippet id="rt">
+    <tag>rt</tag>
+    <description>render (text)</description>
+    <text><![CDATA[render :text => "${1:render}"]]></text>
+  </snippet>
+  <snippet id="rtl">
+    <tag>rtl</tag>
+    <description>render (text, layout)</description>
+    <text><![CDATA[render :text => "${1:render}", :layout => "${2:layoutname}"]]></text>
+  </snippet>
+  <snippet id="rtlt">
+    <tag>rtlt</tag>
+    <description>render (text, layout =&gt; true)</description>
+    <text><![CDATA[render :text => "${1:render}", :layout => ${2:true}]]></text>
+  </snippet>
+  <snippet id="rts">
+    <tag>rts</tag>
+    <description>render (text, status)</description>
+    <text><![CDATA[render :text => "${1:render}", :status => ${2:401}]]></text>
+  </snippet>
+  <snippet id="rw">
+    <tag>rw</tag>
+    <description>attr_accessor ..</description>
+    <text><![CDATA[attr_accessor :${1:attr_names}]]></text>
+  </snippet>
+  <snippet id="sca">
+    <tag>sca</tag>
+    <description>scan(/../) { |match| .. }</description>
+    <text><![CDATA[scan(/${1:pattern}/) { |${2:match}| ${0} }]]></text>
+  </snippet>
+  <snippet id="sel">
+    <tag>sel</tag>
+    <description>select { |e| .. }</description>
+    <text><![CDATA[select { |${1:e}| ${0} }]]></text>
+  </snippet>
+  <snippet id="session">
+    <tag>session</tag>
+    <description>session[…]</description>
+    <text><![CDATA[session[:${1:User}]]]></text>
+  </snippet>
+  <snippet id="sin">
+    <tag>sin</tag>
+    <description>singleton_class()</description>
+    <text><![CDATA[class << self; self end]]></text>
+  </snippet>
+  <snippet id="sor">
+    <tag>sor</tag>
+    <description>sort { |a, b| .. }</description>
+    <text><![CDATA[sort { |a, b| ${0} }]]></text>
+  </snippet>
+  <snippet id="sorb">
+    <tag>sorb</tag>
+    <description>sort_by { |e| .. }</description>
+    <text><![CDATA[sort_by { |${1:e}| ${0} }]]></text>
+  </snippet>
+  <snippet id="ste">
+    <tag>ste</tag>
+    <description>step(2) { |e| .. }</description>
+    <text><![CDATA[step(${1:2}) { |${2:n}|${0} }]]></text>
+  </snippet>
+  <snippet id="sub">
+    <tag>sub</tag>
+    <description>sub(/../) { |match| .. }</description>
+    <text><![CDATA[sub(/${1:pattern}/) { |${2:match}|${0} }]]></text>
+  </snippet>
+  <snippet id="tc">
+    <tag>tc</tag>
+    <description>class .. &lt; Test::Unit::TestCase .. end</description>
+    <text><![CDATA[require "test/unit"
+
+require "${library_file_name}"
+
+class Test${1:amp} < Test::Unit::TestCase
+	def test_${2:case_name}
+		${0}
+	end
+end]]></text>
+  </snippet>
+  <snippet id="tim">
+    <tag>tim</tag>
+    <description>times { |n| .. }</description>
+    <text><![CDATA[times { |${1:n}|${0} }]]></text>
+  </snippet>
+  <snippet id="tra">
+    <tag>tra</tag>
+    <description>transaction( .. ) { .. }</description>
+    <text><![CDATA[transaction${1} { ${0} }]]></text>
+  </snippet>
+  <snippet id="ts">
+    <tag>ts</tag>
+    <description>require "tc_.." ..</description>
+    <text><![CDATA[require "test/unit"
+
+require "tc_${1:test_case_file}"
+require "tc_${2:test_case_file}"
+]]></text>
+  </snippet>
+  <snippet id="uni">
+    <tag>uni</tag>
+    <description>unix_filter { .. }</description>
+    <text><![CDATA[ARGF.each_line${1} do |${2:line}|
+	${0}
+end]]></text>
+  </snippet>
+  <snippet id="until">
+    <tag>until</tag>
+    <description>until ... end</description>
+    <text><![CDATA[until ${1:condition}
+	${0}
+end]]></text>
+  </snippet>
+  <snippet id="upt">
+    <tag>upt</tag>
+    <description>upto(1.0/0.0) { |n| .. }"</description>
+    <text><![CDATA[upto(${1}) { |${2:n}|${0} }]]></text>
+  </snippet>
+  <snippet id="usai">
+    <tag>usai</tag>
+    <description>usage_if()</description>
+    <text><![CDATA[if ARGV.${1}
+  puts "Usage:  #{$$PROGRAM_NAME} ${ARGS_GO_HERE}"
+  exit
+end]]></text>
+  </snippet>
+  <snippet id="usau">
+    <tag>usau</tag>
+    <description>usage_unless()</description>
+    <text><![CDATA[unless ARGV.${1}
+  puts "Usage:  #{$$PROGRAM_NAME} ${ARGS_GO_HERE}"
+  exit
+end]]></text>
+  </snippet>
+
+  <!--  validations-->
+
+  <snippet id="vall">
+    <tag>vall</tag>
+    <text><![CDATA[validates :${1:attrs},
+${2:          :presence => true,}
+${3:          :acceptance => true,}
+${4:          :confirmation => true,}
+${5:          :numericality => true,}
+${6:          :uniqueness => true,}
+${7:          :exclusion => ,}
+${8:          :format => ,}
+${9:          :inclusion => ,}
+${10:          :length => }]]></text>
+    <description>validates alll options</description>
+  </snippet>
+
+  <snippet id="vac">
+    <tag>vac</tag>
+    <text><![CDATA[validates :${1:attrs}, :acceptance => true]]></text>
+    <description>validates acceptance</description>
+  </snippet>
+
+  <snippet id="vac">
+    <tag>vac</tag>
+    <text><![CDATA[validates_associated :${1:attribute}]]></text>
+    <description>validates_associated</description>
+  </snippet>
+
+  <snippet id="vc">
+    <tag>vc</tag>
+    <text><![CDATA[validates :${1:attrs}, :confirmation => true]]></text>
+    <description>validates confirmation</description>
+  </snippet>
+
+  <snippet id="ve">
+    <tag>ve</tag>
+    <text><![CDATA[validates :${1:attrs}, :exclusion => { :in => ${2:set} }]]></text>
+    <description>validates exclusion</description>
+  </snippet>
+
+  <snippet id="vf">
+    <tag>vf</tag>
+    <text><![CDATA[validates :${1:attrs}, :format => { :with => /${2:regexp}/ }]]></text>
+    <description>validates format</description>
+  </snippet>
+
+  <snippet id="vi">
+    <tag>vi</tag>
+    <text><![CDATA[validates :${1:attrs}, :inclusion => { :in => ${2:set} }]]></text>
+    <description>validates inclusion</description>
+  </snippet>
+
+  <snippet id="vl">
+    <tag>vl</tag>
+    <text><![CDATA[validates :${1:attrs}, :length => { :is => ${2:value} }]]></text>
+    <description>validates length</description>
+  </snippet>
+
+  <snippet id="vlmm">
+    <tag>vlmm</tag>
+    <text><![CDATA[validates :${1:attrs}, :length => { :minimum => ${2:val}, :maximum => ${3:val} }]]></text>
+    <description>validates length</description>
+  </snippet>
+
+  <snippet id="vlin">
+    <tag>vlin</tag>
+    <text><![CDATA[validates :${1:attrs}, :length => { :in => ${2:range} }]]></text>
+    <description>validates length</description>
+  </snippet>
+
+  <snippet id="vn">
+    <tag>vn</tag>
+    <text><![CDATA[validates :${1:attrs}, :numericality => true]]></text>
+    <description>validates numericality</description>
+  </snippet>
+
+  <snippet id="vnet">
+    <tag>vnet</tag>
+    <text><![CDATA[validates ${1::attrs}, :numericality => { :equal_to => ${2:val} }]]></text>
+    <description>validates numericality equal_to</description>
+  </snippet>
+
+  <snippet id="vnodd">
+    <tag>vnodd</tag>
+    <text><![CDATA[validates :${1:attrs}, :numericality => { :odd => true }]]></text>
+    <description>validates numericality odd</description>
+  </snippet>
+
+  <snippet id="vneven">
+    <tag>vneven</tag>
+    <text><![CDATA[validates :${1:attrs}, :numericality => { :even => true }]]></text>
+    <description>validates numericality even</description>
+  </snippet>
+
+  <snippet id="vnoi">
+    <tag>vnoi</tag>
+    <text><![CDATA[validates :${1:attrs}, :numericality => { :only_integer => true }]]></text>
+    <description>validates numericality only_integer</description>
+  </snippet>
+
+  <snippet id="vngtlt">
+    <tag>vngtlt</tag>
+    <text><![CDATA[validates :${1:attrs}, :numericality => { :greater_than => ${2:val}, :less_than => ${3:val} }]]></text>
+    <description>validates numericality greater_than less_than</description>
+  </snippet>
+
+  <snippet id="vngtltoet">
+    <tag>vngtltoet</tag>
+    <text><![CDATA[validates :${1:attrs}, :numericality => { :greater_than_or_equal_to => ${2:val}, :less_than_or_equal_to => ${3:val} }]]></text>
+    <description>validates numericality greater_than_or_equal_to less_than_or_equal_to</description>
+  </snippet>
+
+  <snippet id="vnall">
+    <tag>vnall</tag>
+    <text><![CDATA[validates :${1:attrs},
+          :numericality => {
+                             ${2::odd => true,}
+                             ${3::even => true,}
+                             ${4::only_integer => true,}
+                             ${5:equal_to => ,}
+                             ${6:greater_than => ,}
+                             ${7:less_than => ,}
+                             ${8:greater_than_or_equal_to => ,}
+                             ${9:less_than_or_equal_to => }
+                            }]]></text>
+    <description>validates numericality all options</description>
+  </snippet>
+
+  <snippet id="vp">
+    <tag>vp</tag>
+    <text><![CDATA[validates :${1:attrs}, :presence => true]]></text>
+    <description>validates presence</description>
+  </snippet>
+
+  <snippet id="vu">
+    <tag>vu</tag>
+    <text><![CDATA[validates :${1:attrs}, :uniqueness => true]]></text>
+    <description>validates uniqueness</description>
+  </snippet>
+
+  <snippet id="vuws">
+    <tag>vuws</tag>
+    <text><![CDATA[validates :${1:attrs}, :uniqueness => { :scope => ${2:attr}, :message => "${3:msg}" }]]></text>
+    <description>validates uniqueness with scope</description>
+  </snippet>
+
+  <snippet id="vucs">
+    <tag>vucs</tag>
+    <text><![CDATA[validates :${1:attrs}, :uniqueness => { :case_sensitive => false }]]></text>
+    <description>validates uniqueness case_sensitive</description>
+  </snippet>
+
+  <snippet id="vw">
+    <tag>vw</tag>
+    <text><![CDATA[validates_with ${1:class}]]></text>
+    <description>validates_with</description>
+  </snippet>
+
+  <snippet id="veach">
+    <tag>veach</tag>
+    <text><![CDATA[validates_each ${1:attrs} do |record, attr, val|
+  ${0}
+end]]></text>
+    <description>validates_each</description>
+  </snippet>
+
+
+  <snippet id="verify">
+    <tag>verify</tag>
+    <description>verify — redirect</description>
+    <text><![CDATA[verify :only => [:${1}], :session => :user, :params => :id, :redirect_to => {:action => '${2:index}'}
+]]></text>
+  </snippet>
+  <snippet id="verify">
+    <tag>verify</tag>
+    <description>verify — render</description>
+    <text><![CDATA[verify :only => [:${1}], :method => :post, :render => {:status => 500, :text => "use HTTP-POST"}
+]]></text>
+  </snippet>
+  <snippet id="w">
+    <tag>w</tag>
+    <description>attr_writer ..</description>
+    <text><![CDATA[attr_writer :${1:attr_names}]]></text>
+  </snippet>
+  <snippet id="while">
+    <tag>while</tag>
+    <description>while ... end</description>
+    <text><![CDATA[while ${1:condition}
+	${0}
+end]]></text>
+  </snippet>
+  <snippet id="y">
+    <tag>y</tag>
+    <description>:yields:</description>
+    <text><![CDATA[ :yields: ${1:arguments}]]></text>
+  </snippet>
+  <snippet id="Yd">
+    <tag>Yd</tag>
+    <description>YAML.dump(.., file)</description>
+    <text><![CDATA[File.open(${1:yaml}, "w") { |${2:file}| YAML.dump(${3:obj}, ${2}) }]]></text>
+  </snippet>
+  <snippet id="Yl">
+    <tag>Yl</tag>
+    <description>YAML.load(file)</description>
+    <text><![CDATA[File.open(${1:yaml}) { |${2}| YAML.load(${2}) }]]></text>
+  </snippet>
+  <snippet id="zip">
+    <tag>zip</tag>
+    <description>zip(enums) { |row| .. }</description>
+    <text><![CDATA[zip(${1:enums}) { |${2:row}| ${0} }]]></text>
+  </snippet>
+  <snippet id="act">
+    <text><![CDATA[:action => '$0']]></text>
+    <tag>act</tag>
+    <description>:action</description>
+  </snippet>
+  <snippet id="insert">
+    <text><![CDATA[page[:${1:dom_id}].insert_html :${2:bottom}, '${3:text}' $0]]></text>
+    <tag>insert</tag>
+    <description>page.insert_html :bottom, 'dom_id', 'text'</description>
+  </snippet>
+  <snippet id="insert">
+    <text><![CDATA[page.insert_html :${1:bottom}, ${2:dom_id}
+								 							 :partial => '${3:partial}',
+															 :object => @${4:object} $0]]></text>
+    <tag>insert</tag>
+    <description>page.insert_html :bottom, 'dom_id', :partial =&gt; 'partial', :object =&gt; @object</description>
+  </snippet>
+  <snippet id="replace">
+    <text><![CDATA[page[:${1:dom_id}].replace_html '${2:text}' $0]]></text>
+    <tag>replace</tag>
+    <description>page.replace_html 'dom_id', "text</description>
+  </snippet>
+  <snippet id="replace">
+    <text><![CDATA[page[:${1:dom_id}].replace_html :partial => '${2:partial}', :object => @${3:object} $0]]></text>
+    <tag>replace</tag>
+    <description>page.replace_html 'dom_id, :partial =&gt; 'partial', :object =&gt; @object</description>
+  </snippet>
+  <snippet id="remove">
+    <text><![CDATA[page[:${1:dom_id}].remove $0]]></text>
+    <tag>remove</tag>
+    <description>page.remove 'dom_id'</description>
+  </snippet>
+  <snippet id="hide">
+    <text><![CDATA[page[:${1:dom_id}].hide $0]]></text>
+    <tag>hide</tag>
+    <description>page.hide 'dom_id'</description>
+  </snippet>
+  <snippet id="show">
+    <text><![CDATA[page[:${1:dom_id}].show $0]]></text>
+    <tag>show</tag>
+    <description>page.show 'dom_id</description>
+  </snippet>
+  <snippet id="tog">
+    <text><![CDATA[page[:${1:some-element}].toggle $0]]></text>
+    <tag>tog</tag>
+    <description>page.toggle 'dom_id'</description>
+  </snippet>
+  <snippet id="alert">
+    <text><![CDATA[page.alert '${1:Hello world}' $0]]></text>
+    <tag>alert</tag>
+    <description>page.alert 'message'</description>
+  </snippet>
+  <snippet id="redirect">
+    <text><![CDATA[page.redirect_to :controller => '${1:controller}', :action => '${2:action}', :id => @${3:object} $0]]></text>
+    <tag>redirect</tag>
+    <description>page.redirect_to :controller =&gt; 'controller', :action =&gt; 'action', :id =&gt; @object</description>
+  </snippet>
+  <snippet id="call">
+    <text><![CDATA[page.call ${1:function}, ${2:param1}, ${3:param2} $0]]></text>
+    <tag>call</tag>
+    <description>page.call function, param1, param2</description>
+  </snippet>
+  <snippet id="assign">
+    <text><![CDATA[page[:${1:dom_id}].assign ${2:value} $0]]></text>
+    <tag>assign</tag>
+    <description>page.assign "dom_id", value</description>
+  </snippet>
+  <snippet id="raw">
+    <text><![CDATA[page << "${1:alert('hello world);}"]]></text>
+    <tag>raw</tag>
+    <description>page &lt;&lt; "alert('hello world);</description>
+  </snippet>
+  <snippet id="delay">
+    <text><![CDATA[page.delay(${1:5}) do
+	$0
+end]]></text>
+    <tag>delay</tag>
+    <description>page.delay(time)</description>
+  </snippet>
+  <snippet id="visual">
+    <text><![CDATA[page[:${1:dom_id}].visual_effect :${2:highlight} $0]]></text>
+    <tag>visual</tag>
+    <description>page.visual_effect :effect, 'dom_id'</description>
+  </snippet>
+  <snippet id="visual">
+    <text><![CDATA[page[:${1:dom_id}].visual_effect :${2:highlight}, :duration => ${3:2} $0]]></text>
+    <tag>visual</tag>
+    <description>page.visual_effect :effect, 'dom_id', :duration =&gt; 2</description>
+  </snippet>
+  <snippet id="sort">
+    <text><![CDATA[page.sortable '${1:my_list}', :url => { :action => '${2:order}' } $0]]></text>
+    <tag>sort</tag>
+    <description>page.sortable 'my_list', :url =&gt; { :action =&gt; 'order' }</description>
+  </snippet>
+  <snippet id="drag">
+    <text><![CDATA[page.dragable '${1:my_image}', :revert => ${2:true} $0]]></text>
+    <tag>drag</tag>
+    <description>page.dragable 'my_image', :revert =&gt; true</description>
+  </snippet>
+  <snippet id="drop">
+    <text><![CDATA[page.drop_recieving '${1:my_cart}', :url => { :controller => '${2:cart}', :action => '${3:add}' } $0]]></text>
+    <tag>drop</tag>
+    <description>page.drop_recieving 'my_cart', :url =&gt; { :controller =&gt; 'cart', :action =&gt; 'add' }</description>
+  </snippet>
+  <snippet id="k" override="ruby-:">
+    <text><![CDATA[:${1:key} => $0]]></text>
+    <tag>k</tag>
+    <description>hash pair</description>
+  </snippet>
+  <snippet id="rd">
+    <text><![CDATA[redirect_to ${1:path}]]></text>
+    <tag>rd</tag>
+    <description>Redirect To Path</description>
+  </snippet>
+  <snippet id="bs">
+    <text><![CDATA[before_save :${1:method}
+
+def ${1:method}
+  $0
+end]]></text>
+    <tag>bs</tag>
+    <description>before_save</description>
+  </snippet>
+  <snippet id="bu">
+    <text><![CDATA[before_update :${1:method}
+
+def ${1:method}
+  $0
+end]]></text>
+    <tag>bu</tag>
+    <description>before_update</description>
+  </snippet>
+  <snippet id="bc">
+    <text><![CDATA[before_create :${1:method}
+
+def ${1:method}
+  $0
+end]]></text>
+    <tag>bc</tag>
+    <description>before_create</description>
+  </snippet>
+  <snippet id="as">
+    <text><![CDATA[after_save :${1:method}
+
+def ${1:method}
+  $0
+end]]></text>
+    <tag>as</tag>
+    <description>after_save</description>
+  </snippet>
+  <snippet id="au">
+    <text><![CDATA[after_update :${1:method}
+
+def ${1:method}
+  $0
+end]]></text>
+    <tag>au</tag>
+    <description>after_update</description>
+  </snippet>
+  <snippet id="ac">
+    <text><![CDATA[after_create :${1:method}
+
+def ${1:method}
+  $0
+end]]></text>
+    <tag>ac</tag>
+    <description>after_create</description>
+  </snippet>
+  <snippet id="ad">
+    <text><![CDATA[after_destroy :${1:method}
+
+def ${1:method}
+  $0
+end]]></text>
+    <tag>ad</tag>
+    <description>after_destroy</description>
+  </snippet>
+  <snippet id="bd">
+    <text><![CDATA[before_destroy :${1:method}
+
+def ${1:method}
+  $0
+end]]></text>
+    <tag>bd</tag>
+    <description>before_destroy</description>
+  </snippet>
+  <snippet id="hashmarker">
+    <text><![CDATA[# => $1]]></text>
+    <tag>#</tag>
+    <description>Add a # =&gt; Marker</description>
+  </snippet>
+  <snippet id="hashpair">
+    <text><![CDATA[:${1:key} => "${2:value}"]]></text>
+    <accelerator><![CDATA[<Shift><Control>l]]></accelerator>
+    <description>Hash Pair :key =&gt; "value"</description>
+  </snippet>
+  <snippet id="gmate-hashpointer" override="ruby-hashpointer">
+    <text><![CDATA[ => ]]></text>
+    <tag>l</tag>
+    <description>hash pointer</description>
+    <accelerator><![CDATA[<Shift><Alt>l]]></accelerator>
+  </snippet>
+  <snippet id="amc">
+    <text><![CDATA[alias_method_chain :${1:target}, :${2:feature}]]></text>
+    <tag>amc</tag>
+    <description>alias_method_chain</description>
+  </snippet>
+  <snippet id="bf">
+    <text><![CDATA[before_filter :${1:action}, :${2:except|only} => [:${3:actions}] $0]]></text>
+    <tag>bf</tag>
+    <description>before_filter</description>
+  </snippet>
+  <snippet id="af">
+    <text><![CDATA[after_filter :${1:action}, :${2:except|only} => [:${3:actions}] $0]]></text>
+    <tag>af</tag>
+    <description>after_filter</description>
+  </snippet>
+  <snippet id="arf">
+    <text><![CDATA[around_filter :${1:action}, :${2:except|only} => [:${3:actions}] $0]]></text>
+    <tag>arf</tag>
+    <description>around_filter</description>
+  </snippet>
+  <snippet id="sf">
+    <text><![CDATA[skip_filter :${1:action}, :${2:except|only} => [:${3:actions}] $0]]></text>
+    <tag>sf</tag>
+    <description>skip_filter</description>
+  </snippet>
+  <snippet id="sbf">
+    <text><![CDATA[skip_before_filter :${1:action}, :${2:except|only} => [:${3:actions}] $0]]></text>
+    <tag>sbf</tag>
+    <description>skip_before_filter</description>
+  </snippet>
+  <snippet id="saf">
+    <text><![CDATA[skip_after_filter :${1:action}, :${2:except|only} => [:${3:actions}] $0]]></text>
+    <tag>saf</tag>
+    <description>skip_after_filter</description>
+  </snippet>
+  <snippet id="paf">
+    <text><![CDATA[prepend_after_filter :${1:action}, :${2:except|only} => [:${3:actions}] $0]]></text>
+    <tag>paf</tag>
+    <description>prepend_after_filter</description>
+  </snippet>
+  <snippet id="aaf">
+    <text><![CDATA[append_after_filter :${1:action}, :${2:except|only} => [:${3:actions}] $0]]></text>
+    <tag>aaf</tag>
+    <description>append_after_filter</description>
+  </snippet>
+  <snippet id="pbf">
+    <text><![CDATA[prepend_before_filter :${1:action}, :${2:except|only} => [:${3:actions}] $0]]></text>
+    <tag>pbf</tag>
+    <description>prepend_before_filter</description>
+  </snippet>
+  <snippet id="abf">
+    <text><![CDATA[append_before_filter :${1:action}, :${2:except|only} => [:${3:actions}] $0]]></text>
+    <tag>abf</tag>
+    <description>append_before_filter</description>
+  </snippet>
+  <snippet id="parf">
+    <text><![CDATA[prepend_around_filter :${1:action}, :${2:except|only} => [:${3:actions}] $0]]></text>
+    <tag>parf</tag>
+    <description>prepend_around_filter</description>
+  </snippet>
+  <snippet id="aarf">
+    <text><![CDATA[append_around_filter :${1:action}, :${2:except|only} => [:${3:actions}] $0]]></text>
+    <tag>aarf</tag>
+    <description>append_around_filter</description>
+  </snippet>
+  <snippet id="av">
+    <text><![CDATA[after_validation :${1:method}
+
+def ${1:method}
+  $0
+end]]></text>
+    <tag>av</tag>
+    <description>after_validation</description>
+  </snippet>
+  <snippet id="avc">
+    <text><![CDATA[after_validation_on_create :${1:method}
+
+def ${1:method}
+  $0
+end]]></text>
+    <tag>avc</tag>
+    <description>after_validation_on_create</description>
+  </snippet>
+  <snippet id="avu">
+    <text><![CDATA[after_validation_on_update :${1:method}
+
+def ${1:method}
+  $0
+end]]></text>
+    <tag>avu</tag>
+    <description>after_validation_on_update</description>
+  </snippet>
+  <snippet id="bv">
+    <text><![CDATA[before_validation :${1:method}
+
+def ${1:method}
+  $0
+end]]></text>
+    <tag>bv</tag>
+    <description>before_validation</description>
+  </snippet>
+  <snippet id="bvc">
+    <text><![CDATA[before_validation_on_create :${1:method}
+
+def ${1:method}
+  $0
+end]]></text>
+    <tag>bvc</tag>
+    <description>before_validation_on_create</description>
+  </snippet>
+  <snippet id="bvu">
+    <text><![CDATA[before_validation_on_update :${1:method}
+
+def ${1:method}
+  $0
+end]]></text>
+    <tag>bvu</tag>
+    <description>before_validation_on_update</description>
+  </snippet>
+
+  <snippet id="scope">
+    <text><![CDATA[scope :${1:attr}, where(${2:cond})]]></text>
+    <tag>scope</tag>
+    <description>scope</description>
+  </snippet>
+
+
+  <snippet id="ns">
+    <text><![CDATA[named_scope :${1:name}, :conditions => { :${2:field} => ${3:condition} }, :order => "${4:field}"$0]]></text>
+    <tag>ns</tag>
+    <description>named_scope</description>
+  </snippet>
+
+  <snippet id="ds">
+    <text><![CDATA[default_scope :${1:name}, :conditions => { :${2:field} => ${3:condition} }, :order => "${4:field}"$0]]></text>
+    <tag>ds</tag>
+    <description>default_scope</description>
+  </snippet>
+  <snippet id="ana">
+    <text><![CDATA[accepts_nested_attributes_for :${1:association},
+															:allow_destroy => ${2:true|false},
+															:reject_if => lambda { |attrs| attrs.values.all?(&:blank?) }]]></text>
+    <tag>ana</tag>
+    <description>accepts_nested_attributes_for</description>
+  </snippet>
+
+  <snippet id="aa">
+    <text><![CDATA[attr_accessible :${1:attr_names}]]></text>
+    <tag>aa</tag>
+    <description>attr_accessible</description>
+  </snippet>
+
+  <snippet id="val">
+    <text><![CDATA[validate :${1:method}
+
+def ${1:method}
+  $0
+end]]></text>
+    <tag>val</tag>
+    <description>validate</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[cattr_writer :${1:attr_names}]]></text>
+    <tag>cw</tag>
+    <description>cattr_writer</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[cattr_reader :${1:attr_names}]]></text>
+    <tag>cr</tag>
+    <description>cattr_reader</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[cattr_accessor :${1:attr_names}]]></text>
+    <tag>ca</tag>
+    <description>cattr_accessor</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[mattr_accessor :${1:attr_names}]]></text>
+    <tag>ma</tag>
+    <description>mattr_accessor</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[mattr_reader :${1:attr_names}]]></text>
+    <tag>mr</tag>
+    <description>mattr_reader</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[mattr_writer :${1:attr_names}]]></text>
+    <tag>mw</tag>
+    <description>mattr_writer</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[Gem::Specification.new do |gem|
+	gem.name = '${1:name}'
+	gem.version = '${2:0.0.1}'
+	gem.date = Date.today.to_s
+
+	# gem.add_dependency 'hpricot', '~> 0.8.2'
+	# gem.add_development_dependency 'rspec', '~> 1.2.9'
+
+	gem.summary = "${3:summary}"
+	gem.description = "${4:Longer description.}"
+
+	gem.authors = ['${5:full_name}']
+	gem.email = '${6:email}'
+	gem.homepage = '${7:url}'
+
+	gem.rubyforge_project = nil
+	gem.has_rdoc = true
+	gem.rdoc_options = ['--main', 'README.rdoc', '--charset=UTF-8']
+	gem.extra_rdoc_files = ['README.rdoc', 'LICENSE', 'CHANGELOG.rdoc']
+
+	gem.files = Dir['Rakefile', '{bin,lib,man,test,spec}/**/*', 'README*', 'LICENSE*'] & \\`git ls-files -z\\`.split("\\0")
+end
+]]></text>
+    <tag>gemspec</tag>
+    <description>Gem::Specification.new</description>
+  </snippet>
+</snippets>
+
