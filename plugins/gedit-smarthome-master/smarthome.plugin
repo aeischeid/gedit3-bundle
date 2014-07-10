@@ -1,0 +1,9 @@
+[Plugin]
+Loader=python3
+Module=smarthome
+IAge=3
+Name=Smart Home
+Description=Better behaviour for the "home" and "end" buttons.
+Authors=Guillaume Delhumeau <guillaume@guillaumedelhumeau.com>
+Copyright=Copyright © 2012 Guillaume Delhumeau <guillaume@guillaumedelhumeau.com>
+Website=https://github.com/gdelhumeau/gedit-smarthome

@@ -1,0 +1,9 @@
+[Plugin]
+Loader=python3
+Module=gedit-beyond
+IAge=3
+Name=Gedit beyond
+Description=Scrolling after the end line of editing file
+Authors=cristHian Gz. (gcca) <gcca@gcca.tk>
+Copyright=Copyright © 2014 cristHian Gz.
+Website=https://gcca.tk

@@ -1,0 +1,5 @@
+A simple plugin that provides a dialog to edit shortcuts of gedit.
+
+Install:
+	* mkdir -p $HOME/.local/share/gedit/plugins
+	* cp -r acceleditor acceleditor.plugin $HOME/.local/share/gedit/plugins/
