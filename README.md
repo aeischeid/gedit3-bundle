@@ -40,15 +40,15 @@ specific plugin licensing and copyright.
 
 ### Languages
 
-* Basic YAML
-* CoffeeScript
+* CoffeeScript (https://github.com/wavded/gedit-coffeescript)
 * ColdFusion
+* CSS3 (https://github.com/jonjamz/css3-gedit)
 * Cucumber
 * Groovy/Grails/Gradle
 * HAML
-* Markdown
-* reStructuredText
 * rhtml/erb
-* Ruby/Rails
-* SASS and Stylus
-* Jade and Eco templates
+* Ruby/Rails?
+* Rust (https://github.com/rust-lang/gedit-config)
+* SASS SCSS
+* Stylus
+* Jade templates ()

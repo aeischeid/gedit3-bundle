@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <language _name="dokuwiki" _section="Markup" version="2.0" id="dokuwiki">
  <styles>
   <style _name="String" map-to="def:string" id="string"/>
